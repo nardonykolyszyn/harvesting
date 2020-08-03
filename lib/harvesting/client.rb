@@ -10,6 +10,10 @@ module Harvesting
 
     attr_accessor :access_token, :account_id
 
+    def self.setup
+      yield self
+    end
+
     # Returns a new instance of `Client`
     #
     #     client = Client.new(access_token: "12345678", account_id: "98764")
